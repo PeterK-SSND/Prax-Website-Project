@@ -2,14 +2,13 @@ const data = {
     home: [
         {
             title: "About Me",
-            desc: "Hello! Welcome to my website. I am student from IT school, Nová Dubnica, Slovakia. My prax is focused on web development and IoT (Internet of Things).",
+            desc: "Hello! Welcome to my website. I am student from IT school, Nová Dubnica, Slovakia. My prax is focused on web development and IoT (Internet of Things). <br> <br>",
             img: "./img/about-me.jpg",
             url: "#"
         },
         {
             title: "About my School",
-            desc: "Spojená škola sv. Jána Bosca in Nová Dubnica provides quality technical and general education guided by salesian values. Through participation in the Erasmus+ program, the school creates opportunities for its students to travel abroad, gain valuable international work experience at Vitalis, and build a strong foundation for their future professional careers.",
-            img: "./img/ssnd.png",
+            desc: "Spojená škola sv. Jána Bosca in Nová Dubnica provides technical and general education guided by salesian values. Through participation in the Erasmus+ program, the school creates opportunities to travel abroad, gain international work experience at Vitalis, and build a strong foundation for their future careers.",            img: "./img/ssnd.png",
             url: "#"
         },
         {
@@ -218,7 +217,7 @@ function updateSliderContent() {
 
     setTimeout(function () {
         document.getElementById('content-title').innerText = currentSlide.title;
-        document.getElementById('content-desc').innerText = currentSlide.desc;
+        document.getElementById('content-desc').innerHTML = currentSlide.desc;
 
         imgElement.src = currentSlide.img;
         document.getElementById('carousel-link').href = currentSlide.url;
