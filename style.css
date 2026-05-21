@@ -349,6 +349,9 @@ body {
     .description-wrapper p {
         font-size: 0.95rem;
         line-height: 1.5;
+        /* ZMENA TU: Vypnutie scrollu a zobrazenie celého textu */
+        max-height: none !important;
+        overflow-y: visible !important;
     }
 
     #Vitalis-logo {
