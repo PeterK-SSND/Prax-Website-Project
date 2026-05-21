@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Erasmus+ Vitalis Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button class="nav-btn active" onclick="changeCategory('home', event)">Home</button>
+
+        <div class="dropdown">
+            <button class="nav-btn" onclick="toggleDropdown('practice-dropdown', event)">Practice ▼</button>
+            <div id="practice-dropdown" class="dropdown-content">
+                <a href="#" onclick="changeCategory('practice1', event)">1st Week</a>
+                <a href="#" onclick="changeCategory('practice2', event)">2nd Week</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="nav-btn" onclick="toggleDropdown('culture-dropdown', event)">Culture ▼</button>
+            <div id="culture-dropdown" class="dropdown-content">
+                <a href="#" onclick="changeCategory('culture1', event)">Leipzig</a>
+                <a href="#" onclick="changeCategory('culture2', event)">Berlin</a>
+            </div>
+        </div>
+
+        <button class="nav-btn" onclick="changeCategory('freetime', event)">FreeTime</button>
+    </nav>
+
+    <div class="carousel-container">
+
+        <div class="content-box">
+
+            <div class="presentation-frame">
+
+                <button class="arrow-btn left-arrow" onclick="changeSlide('prev')">&#10094;</button>
+
+                <a id="carousel-link" href="#" class="image-link">
+                    <div class="image-wrapper">
+                        <img id="carousel-img" src="" alt="Project Image">
+                    </div>
+                </a>
+
+                <button class="arrow-btn right-arrow" onclick="changeSlide('next')">&#10095;</button>
+
+            </div>
+
+            <p id="image-caption" class="image-caption"></p>
+
+            <div class="description-wrapper">
+                <h2 id="content-title"></h2>
+                <p id="content-desc"></p>
+            </div>
+
+            <div id="carousel-dots" class="carousel-dots"></div>
+
+        </div>
+
+    </div>
+
+    <div id="Vitalis-logo">
+        <a href="https://www.gut-wehlitz.de/" target="_blank">
+            <img src="./img/Vitalis-logo.avif" alt="Logo Vitalis">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
